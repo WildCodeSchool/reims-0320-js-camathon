@@ -1,7 +1,7 @@
 import React from 'react';
 import HomeButton from "./HomeButton";
 import TagList from "./TagList";
-import './search.css'
+import './search.css';
 
 
 class Search extends React.Component {
