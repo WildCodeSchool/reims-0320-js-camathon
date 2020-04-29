@@ -1,20 +1,20 @@
 import React from 'react';
 
-funtion CameraLive = () => {
+funtion CameraLive = (props) => {
   return (
     <div>
-      <div>
+      <div className="cameralive-title" >
         <h1> Camera title </h1>
       </div>
-      <div>retour cam </div>
+      <div className="cameralive-cam" >retour cam </div>
       <div>
-        <button type="button" onClick={''}> camera proche </button>
+        <button className="cameralive-camnearby" type="button" onClick={''}> camera proche </button>
       </div>
       <div>
-        <button type="button" onClick={''}> go to home </button>
+        <button className="cameralive-gohome" type="button" onClick={''}> go to home </button>
       </div>
     </div>
   );
-};
+}
 
 export default CameraLive;
