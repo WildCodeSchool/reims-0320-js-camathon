@@ -1,0 +1,7 @@
+.modalOff {
+    display: none;
+}
+
+.modalOn {
+    display: flex;
+}
