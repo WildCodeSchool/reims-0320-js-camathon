@@ -20,7 +20,7 @@ function App() {
           <Link to="/" />
         </ul>
         <Switch>
-          <Route exact path="/" >
+          <Route exact path="/">
             <Home setWebcams={setWebcams} />
           </Route>
           <Route path="/search">
