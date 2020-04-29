@@ -17,6 +17,6 @@ function CameraLive() {
       </div>
     </div>
   );
-}
+} 
 
 export default CameraLive;
