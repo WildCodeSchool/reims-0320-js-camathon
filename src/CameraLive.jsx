@@ -1,16 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-function CameraLive() { 
-  <div>
+funtion CameraLive = () => {
+  return (
     <div>
-      <h1> Camera title </h1>
+      <div>
+        <h1> Camera title </h1>
+      </div>
+      <div>retour cam </div>
+      <div>
+        <button type="button" onClick={''}> camera proche </button>
+      </div>
+      <div>
+        <button type="button" onClick={''}> go to home </button>
+      </div>
     </div>
-    <div>
-      retour cam
-    </div>
-    <button> camera proche </button>
-    <button> go to home </button>
-  </div>
-}
+  );
+};
 
 export default CameraLive;
