@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Search from './components/Search.jsx';
 import './App.css';
 import {
   Router,
@@ -14,13 +15,13 @@ function App() {
         <nav>
           <ul>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/Recherche">Recherche</Link></li>
+            <li><Link to="/Search">Search</Link></li>
             <li><Link to="/CameraLive">Camera Live</Link></li>
           </ul>
         </nav>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/Recherche" component={Recherche} />
+          <Route path="/Search" component={Search} />
           <Route path="/CameraLive" component={CameraLive} />
         </Switch>
       </div>
