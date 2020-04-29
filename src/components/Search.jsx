@@ -38,11 +38,7 @@ class Search extends React.Component {
                     <TagList onClick={this.tagUpdate}/>
                 </div>
                 <div>
-                    <p className="camStyle">Cam 1</p>
-                    <p className="camStyle">Cam 1</p>
-                    <p className="camStyle">Cam 1</p>
-                    <p className="camStyle">Cam 1</p>
-                    
+                    {this.props.webcams.map((webcam)=> <p>{webcam.title}</p>)}
                 </div>
             </div>
           
