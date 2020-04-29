@@ -3,6 +3,8 @@ This project is made by :
 -Victor Auxietre-Fontes
 -Joel Rodier
 
+key of api: Nkg2ZRFlfPysCpogNqdb4ksLnaqzZFni
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
