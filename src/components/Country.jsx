@@ -1,5 +1,6 @@
 /* eslint-disable quote-props */
 import React from 'react';
+import './Home.css';
 
 const country = [
   { code: 'AF', country: 'Afghanistan' },
@@ -251,7 +252,7 @@ const country = [
 
 function Country({ onClick }) {
   return (
-    <ul className="tagList">
+    <ul className="countryList">
       {country.map((countryList) => <div><button onClick={() => onClick(countryList)} type="button">{countryList.country}</button></div>)}
     </ul>
   );
