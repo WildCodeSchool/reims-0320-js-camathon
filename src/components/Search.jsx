@@ -4,20 +4,25 @@ import TagList from "./TagList";
 import './search.css'
 
 class Search extends React.Component {
-    constructor() {
+    constructor(props) {
         super(props);
         this.state = {
             modalShow: false,
-            tagChoosen : 'chose a tag',
+            tagChosen: 'choose a tag',
         };
     }
 
     manageModale =() => {
-        {this.setState({ modalShow: !this.state.modalShow})}
+        this.setState({
+            modalShow: !this.state.modalShow,
+        })
     }
 
     tagUpdate = (tag) => {
-        this.setState({tagChoosen : tag })
+        this.setState({
+            tagChosen : tag,
+            modalShow: false,
+        })
     }
     
     render() {
@@ -26,10 +31,10 @@ class Search extends React.Component {
                 <div><HomeButton /></div>
                 <div>
                     <p>text tag</p>
-                    <button type='button' onClick={this.manageModale}>{this.state.tagChoosen}</button>
+                    <button type='button' onClick={this.manageModale}>{this.state.tagChosen}</button>
                 </div>
                 <div className={this.state.modalShow === false ? 'modalOFF' : 'modalON'}>
-                    <TagList  manageModale={this.manageModale} tagUpdate={this.tagUpdate}/>
+                    <TagList onClick={this.tagUpdate}/>
                 </div>
              
             </div>
