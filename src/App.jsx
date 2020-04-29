@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Search from './components/Search';
 import Home from './components/Home';
-import CameraLive from './CameraLive';
+import CameraLive from './components/CameraLive';
 import './App.css';
 import {
   BrowserRouter,

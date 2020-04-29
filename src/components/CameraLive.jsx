@@ -1,4 +1,5 @@
 import React from 'react';
+import HomeButton from './HomeButton';
 
 function CameraLive() {
   return (
@@ -11,7 +12,7 @@ function CameraLive() {
         <button className="cameralive-camnearby" type="button" onClick={''}> camera proche </button>
       </div>
       <div>
-        <button className="cameralive-gohome" type="button" onClick={''}> go to home </button>
+        <HomeButton />
       </div>
     </div>
   );
