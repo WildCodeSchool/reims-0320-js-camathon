@@ -4,7 +4,7 @@ import Modal from './Modal';
 
 function Home() {
   return (
-    <div className="homeGlobalStyle">
+    <div className="homeGlobalStyle homeStyle">
       <h1 className="homeTitle">CamAthon</h1>
       <div className="homeText">
         <p>Welcome! Prepare your travel before your luggages</p>
