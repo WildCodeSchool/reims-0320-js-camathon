@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
+import Search from './components/Search';
+import Home from './components/Home';
+import CameraLive from './components/CameraLive';
+import './App.css';
 import {
   BrowserRouter,
   Link,
   Switch,
   Route,
 } from 'react-router-dom';
-import Search from './components/Search';
-import Home from './components/Home';
-import CameraLive from './CameraLive';
-import './App.css';
+
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <button type="button"><Link to="/search">Go</Link></button>
       </div>
     </BrowserRouter>
+
   );
 }
 
