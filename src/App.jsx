@@ -15,7 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="appStyle">
-        <ul>
+        <ul className="hidden">
           <Link to="/" />
           <Link to="/live" />
         </ul>
