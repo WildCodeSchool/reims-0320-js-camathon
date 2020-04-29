@@ -1,31 +1,29 @@
 import React, { useState } from 'react';
-import Search from './components/Search';
-import Home from './components/Home';
-import CameraLive from './CameraLive';
-import './App.css';
 import {
   BrowserRouter,
   Link,
   Switch,
   Route,
 } from 'react-router-dom';
+import Search from './components/Search';
+import Home from './components/Home';
+import CameraLive from './CameraLive';
+import './App.css';
 
 function App() {
   return (
     <BrowserRouter>
-      <div>
-        <nav>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/search">Search</Link></li>
-            <li><Link to="/live">Camera Live</Link></li>
-          </ul>
-        </nav>
+      <div className="appStyle">
+        <ul>
+          <Link to="/" />
+          <Link to="/live" />
+        </ul>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/search" component={Search} />
           <Route path="/live" component={CameraLive} />
         </Switch>
+        <button type="button"><Link to="/search">Go</Link></button>
       </div>
     </BrowserRouter>
   );
