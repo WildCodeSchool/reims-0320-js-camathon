@@ -5,14 +5,9 @@ const tagList = [ 'airport', 'area', 'bay', 'beach', 'building', 'camping', 'cit
 
 function TagList({ onClick }) {
     return(
-        <ul className="tagList">
-            {tagList.map((tag) => 
-                <li>
-                    <button type='button' onClick={() => onClick(tag)}>{tag}</button>
-                </li>)}
-        
-        </ul>
-    )
-}
-
+        <div className="tagList">
+            {tagList.map((tag) =><button className="tagButton" type="button" onClick={()=>onClick(tag)}>{tag}</button>)}
+        </div>
+        )
+    }
 export default TagList;

@@ -3,6 +3,7 @@ import HomeButton from "./HomeButton";
 import TagList from "./TagList";
 import './search.css'
 
+
 class Search extends React.Component {
     constructor(props) {
         super(props);
@@ -27,16 +28,22 @@ class Search extends React.Component {
     
     render() {
         return(
-            <div>
-                <div><HomeButton /></div>
+            <div className="globalSearchStyle">
+                <div className="hidden"><HomeButton /></div>
                 <div>
-                    <p>text tag</p>
-                    <button type='button' onClick={this.manageModale}>{this.state.tagChosen}</button>
+                    <p>Choose a tag to focus your research</p>
+                    <button className="tagButton" type='button' onClick={this.manageModale}>{this.state.tagChosen}</button>
                 </div>
                 <div className={this.state.modalShow === false ? 'modalOFF' : 'modalON'}>
                     <TagList onClick={this.tagUpdate}/>
                 </div>
-             
+                <div>
+                    <p className="camStyle">Cam 1</p>
+                    <p className="camStyle">Cam 1</p>
+                    <p className="camStyle">Cam 1</p>
+                    <p className="camStyle">Cam 1</p>
+                    
+                </div>
             </div>
           
         )
