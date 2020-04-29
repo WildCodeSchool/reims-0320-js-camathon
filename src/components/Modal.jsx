@@ -9,7 +9,9 @@ class Modal extends React.Component {
     this.state = {
       modalShow: false,
       countryChosen: 'choose a country',
+      codeCountry: null
     };
+    
   }
 
 modalShow = () => {
@@ -18,12 +20,17 @@ modalShow = () => {
   });
 }
 
-countryUpdate = (countryList) => {
+countryUpdate = (country) => {
   this.setState({
-    countryChosen: countryList.country,
+    countryChosen: country.country,
     modalShow: false,
+    codeCountry: country.code,
   });
+  this.props.getCodeCountry(country.code);
 }
+
+
+
 
 render() {
   return (

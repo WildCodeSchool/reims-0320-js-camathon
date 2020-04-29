@@ -2,7 +2,7 @@
 import React from 'react';
 import './Home.css';
 
-const country = [
+const countryList = [
   { code: 'AF', country: 'Afghanistan' },
   { code: 'AX', country: 'Aland Islands' },
   { code: 'AL', country: 'Albania' },
@@ -253,7 +253,7 @@ const country = [
 function Country({ onClick }) {
   return (
     <ul className="countryList">
-      {country.map((countryList) => <div><button onClick={() => onClick(countryList)} type="button">{countryList.country}</button></div>)}
+      {countryList.map((country) => <div><button onClick={() => onClick(country)} type="button">{country.country}</button></div>)}
     </ul>
   );
 }

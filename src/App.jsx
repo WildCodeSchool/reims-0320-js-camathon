@@ -12,6 +12,7 @@ import CameraLive from './components/CameraLive';
 import './App.css';
 
 function App() {
+  const [webcams, setWebcams] = useState([]);
   return (
     <BrowserRouter>
       <div className="appStyle">
@@ -20,8 +21,12 @@ function App() {
           <Link to="/live" />
         </ul>
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/search" component={Search} />
+          <Route exact path="/" >
+            <Home setWebcams={setWebcams} />
+          </Route>
+          <Route path="/search">
+            <Search webcams={webcams} />
+          </Route>
           <Route path="/live" component={CameraLive} />
         </Switch>
       </div>
