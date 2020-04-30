@@ -27,7 +27,7 @@ function App() {
             <Search setWebcams={setWebcams} webcams={webcams} />
           </Route>
           <Route path="/live">
-            <CameraLive webcams={webcams}/> 
+            <CameraLive webcams={webcams} />
           </Route>
         </Switch>
       </div>
