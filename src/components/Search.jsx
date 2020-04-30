@@ -46,7 +46,7 @@ class Search extends React.Component {
                     <TagList onClick={this.tagUpdate}/>
                 </div>
                 <div className="webcamList">
-                    {this.props.webcams.map((webcam)=> <button onClick={()=> this.setWebcams(webcam) } type="button" className="webcamButton"><Link to="/live">{webcam.title}</Link></button>)}
+                    {this.props.webcams.map((webcam)=> <Link className="link" to="/live"><button onClick={()=> this.setWebcams(webcam) } type="button" className="webcamButton">{webcam.title}</button></Link>)}
                 </div>
             </div>
           

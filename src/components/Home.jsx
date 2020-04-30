@@ -28,11 +28,11 @@ class Home extends React.Component {
       <div className="homeStyle">
         <h1 className="homeTitle">CamAthon</h1>
         <div className="homeText">
-          <p>Welcome! Prepare your travel before your luggages</p>
-          <p>Choose the country that you want to visit, then the city you are interested by and enjoy your journey.</p>
+          <h2>Welcome!</h2>
+          <p>Prepare your travel before your luggages. Choose the country that you want to visit, then the city you are interested by and enjoy your journey.</p>
         </div>
-        <Modal getCodeCountry={this.getCodeCountry} />
-        <Link className="goButtonStyle" to="/search">Go</Link>
+        <Modal  getCodeCountry={this.getCodeCountry} />
+        <Link className="buttonStyle" to="/search">Go</Link>
       </div>
     );
   }

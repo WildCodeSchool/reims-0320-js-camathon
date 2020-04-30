@@ -4,21 +4,28 @@
 .homeTitle {
     text-align: center;
     font-family: Lemonada;
+    font-size: 3rem;
+    margin: 0;
 }
 
 .homeText {
     text-align: center;
+    font-size: 1.1rem;
     font-family: Lemonada;
+    width: 80vw;
+    
+   
 }
 
 .homeStyle {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 100vh;
     width: 100vw;
-    background-color: rgb(252, 252, 87);
+    background-color: #192335;
+    color: #7ad0d4;
 }
 
 .countryList {
@@ -30,26 +37,35 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
     height: 100vh;
+  
 }
 
 .buttonCountry {
+    
+    font-weight: bold;
     display: block;
-    background-color: rgb(111, 111, 202);
-    color: white;
+    font-size: 1.3rem;
+    background-color: #2a657a;
+    color: #e0e9e8;
     border: none;
     border-radius: 4px;
     text-align: center;
     height: 2em;
     cursor: pointer;
+    margin-bottom: 1rem;
+    width: 70vw;
+    height: 3rem;
+    box-shadow: 0px 5px 5px black;
+
+  
+   
 }
 
-.buttonListStyle {
-    height: 2em;
-    padding: 0.2em;
-}
 
 .goButtonStyle {
     color: blue;
     margin-bottom: 4rem;
     text-decoration: none;
+    
 }
+
