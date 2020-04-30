@@ -1,7 +1,7 @@
 import React from 'react';
 import Axios from 'axios';
 import HomeButton from './HomeButton';
-import CameraNearby from './CameraNearby';
+import './cameraLive.css';
 
 class CameraLive extends React.Component {
   constructor(props) {
@@ -11,31 +11,21 @@ class CameraLive extends React.Component {
     };
   }
 
-  componentDidMount() {
-    //this.printCam();
-  }
+  
 
-
-/*  printCam = () => {
-    Axios.get(`https://api.windy.com/api/webcams/v2/list/webcam=${this.props.webcam.id}?show=webcams:image,location,player&key=VaEdlfWg03XttPZBGoKRTgxTby3EJwhF`)
-      .then((response) => response.data)
-      .then((data) => {
-        this.setState({ linkWebcam: data.result.webcams[0].player.day.embed });
-      });
-  }*/
 
   render() {
     return (
-      <div>
+      <div className="globalCameraLiveStyle">
         <div className="cameralive-title">
-          <h1> welcome to:</h1>
-          <p>{this.props.webcams.title}</p>
+          <h2> welcome to:</h2>
+          <p>{this.props.live.title}</p>
         </div>
-        <iframe src={this.state.linkWebcam} width="300" height="200" frameBorder="20" title="go"> </iframe>
-        <div>
+        <iframe src={this.props.live.player.day.embed} width="300" height="200" frameBorder="20" title="go"></iframe>
+        {/*<div>
           <CameraNearby />
-        </div>
-        <div>
+        </div>*/}
+        <div className='homeButton'>
           <HomeButton />
         </div>
       </div>
