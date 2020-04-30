@@ -2,7 +2,7 @@ import React from 'react';
 import HomeButton from "./HomeButton";
 import TagList from "./TagList";
 import './search.css';
-import Axios from 'axios';
+
 
 
 class Search extends React.Component {

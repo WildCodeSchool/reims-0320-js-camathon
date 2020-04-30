@@ -1,0 +1,23 @@
+.globalCameraLiveStyle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    font-size: 2rem;
+    background-color: #2a657a;
+    color: #e0e9e8;
+}
+
+.homeButton {
+    width: 70vw;
+    background-color: #e0e9e8;
+    border-radius: 10px;
+    border: hidden;
+    color: #192335;;
+    box-shadow: 2px 2px 3px black;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
