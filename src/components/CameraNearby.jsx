@@ -5,7 +5,7 @@ class Nearby extends React.Component {
   constructor(props) {
     super(props);
     this.states = {
-      resultata: null,
+      result: '',
     };
   }
 
@@ -13,7 +13,7 @@ class Nearby extends React.Component {
     Axios.get('https://api.windy.com/api/webcams/v2/list/nearby=48.8534,2.3488,100?key=VaEdlfWg03XttPZBGoKRTgxTby3EJwhF')
       .then((response) => response.data)
       .then((data) => {
-        this.setState({ resultata: data.result.webcams[0].id });
+        this.setState({ result: data.result.webcams[0].id });
       });
   }
 
@@ -21,7 +21,7 @@ class Nearby extends React.Component {
     return (
       <div>
         <button className="nearby-button" type="button" onClick={this.searchcamnearby}>
-          clickme
+          camera nearby
         </button>
       </div>
     );
