@@ -11,7 +11,6 @@ class Modal extends React.Component {
       countryChosen: 'choose a country',
       codeCountry: null
     };
-    
   }
 
 modalShow = () => {
@@ -30,13 +29,11 @@ countryUpdate = (country) => {
 }
 
 
-
-
 render() {
   return (
     <>
       <div>
-        <button type="button" onClick={this.modalShow}>{this.state.countryChosen}</button>
+        <button type="button" className="buttonStyle" onClick={this.modalShow}>{this.state.countryChosen}</button>
       </div>
       <div className={this.state.modalShow ? 'modalOn' : 'modalOff'}>
         <Country onClick={this.countryUpdate} />

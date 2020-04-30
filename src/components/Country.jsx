@@ -253,7 +253,7 @@ const countryList = [
 function Country({ onClick }) {
   return (
     <ul className="countryList">
-      {countryList.map((country) => <div><button onClick={() => onClick(country)} type="button">{country.country}</button></div>)}
+      {countryList.map((country) => <div className="buttonListStyle"><button className="buttonCountry" onClick={() => onClick(country)} type="button">{country.country}</button></div>)}
     </ul>
   );
 }

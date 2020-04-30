@@ -18,16 +18,17 @@ function App() {
       <div className="appStyle">
         <ul className="hidden">
           <Link to="/" />
-          <Link to="/live" />
         </ul>
         <Switch>
-          <Route exact path="/" >
+          <Route exact path="/">
             <Home setWebcams={setWebcams} />
           </Route>
           <Route path="/search">
-            <Search webcams={webcams} />
+            <Search setWebcams={setWebcams} webcams={webcams} />
           </Route>
-          <Route path="/live" component={CameraLive} />
+          <Route path="/live">
+            <CameraLive webcams={webcams}/> 
+          </Route>
         </Switch>
       </div>
     </BrowserRouter>
