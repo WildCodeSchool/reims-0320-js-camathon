@@ -11,6 +11,10 @@ class CameraLive extends React.Component {
     };
   }
 
+  componentDidMount() {
+    this.printCam();
+  }
+
 
   printCam = () => {
     Axios.get(`https://api.windy.com/api/webcams/v2/list/webcam=${this.props.webcams.id}?show=webcams:image,location,player&key=VaEdlfWg03XttPZBGoKRTgxTby3EJwhF`)
@@ -24,12 +28,10 @@ class CameraLive extends React.Component {
     return (
       <div>
         <div className="cameralive-title">
-          <h1> webcam title </h1>
+          <h1> welcome to:</h1>
+          <p>{this.props.webcams.title}</p>
         </div>
-        <div className="cameralive-cam">
-          {/*<video controls width="250"><source src={this.state.linkWebcam}type="video/webm" /> </video>*/}
-        </div>
-        <button type="button" onClick={this.printCam}>Button</button>
+        <iframe src={this.state.linkWebcam} width="300" height="200" frameBorder="20" title="go"> </iframe>
         <div>
           <CameraNearby />
         </div>

@@ -10,7 +10,7 @@ class Nearby extends React.Component {
   }
 
   searchcamnearby = () => {
-    Axios.get('https://api.windy.com/api/webcams/v2/list/nearby=48.8534,2.3488,100?key=VaEdlfWg03XttPZBGoKRTgxTby3EJwhF')
+    Axios.get(`https://api.windy.com/api/webcams/v2/list/nearby=${48.8534},${2.3488},100?key=VaEdlfWg03XttPZBGoKRTgxTby3EJwhF`)
       .then((response) => response.data)
       .then((data) => {
         this.setState({ result: data.result.webcams[0].id });
