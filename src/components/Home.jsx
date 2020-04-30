@@ -14,9 +14,10 @@ class Home extends React.Component {
   }
 
   getCodeCountry = (code) => {
-    Axios.get(`https://api.windy.com/api/webcams/v2/list/country=${this.state.codeCountry}?key=VaEdlfWg03XttPZBGoKRTgxTby3EJwhF`)
+    Axios.get(`https://api.windy.com/api/webcams/v2/list/country=${this.state.codeCountry}?key=VaEdlfWg03XttPZBGoKRTgxTby3EJwhF&show=webcams:category,image,location,player`)
       .then((response) => {
         this.props.setWebcams(response.data.result.webcams);
+        this.props.setCode(this.state.codeCountry)
       });
     this.setState({
       codeCountry: code,
