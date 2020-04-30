@@ -12,17 +12,17 @@ class CameraLive extends React.Component {
   }
 
   componentDidMount() {
-    this.printCam();
+    //this.printCam();
   }
 
 
-  printCam = () => {
-    Axios.get(`https://api.windy.com/api/webcams/v2/list/webcam=${this.props.webcams.id}?show=webcams:image,location,player&key=VaEdlfWg03XttPZBGoKRTgxTby3EJwhF`)
+/*  printCam = () => {
+    Axios.get(`https://api.windy.com/api/webcams/v2/list/webcam=${this.props.webcam.id}?show=webcams:image,location,player&key=VaEdlfWg03XttPZBGoKRTgxTby3EJwhF`)
       .then((response) => response.data)
       .then((data) => {
         this.setState({ linkWebcam: data.result.webcams[0].player.day.embed });
       });
-  }
+  }*/
 
   render() {
     return (

@@ -14,9 +14,10 @@ class Home extends React.Component {
   }
 
   getCodeCountry = (code) => {
-    Axios.get(`https://api.windy.com/api/webcams/v2/list/country=${this.state.codeCountry}?key=VaEdlfWg03XttPZBGoKRTgxTby3EJwhF`)
+    Axios.get(`https://api.windy.com/api/webcams/v2/list/country=${this.state.codeCountry}?key=VaEdlfWg03XttPZBGoKRTgxTby3EJwhF&show=webcams:category,image,location,player`)
       .then((response) => {
         this.props.setWebcams(response.data.result.webcams);
+        this.props.setCode(this.state.codeCountry)
       });
     this.setState({
       codeCountry: code,
@@ -28,11 +29,11 @@ class Home extends React.Component {
       <div className="homeStyle">
         <h1 className="homeTitle">CamAthon</h1>
         <div className="homeText">
-          <p>Welcome! Prepare your travel before your luggages</p>
-          <p>Choose the country that you want to visit, then the city you are interested by and enjoy your journey.</p>
+          <h2>Welcome!</h2>
+          <p>Prepare your travel before your luggages. Choose the country that you want to visit, then the city you are interested by and enjoy your journey.</p>
         </div>
-        <Modal getCodeCountry={this.getCodeCountry} />
-        <Link className="goButtonStyle" to="/search">Go</Link>
+        <Modal  getCodeCountry={this.getCodeCountry} />
+        <Link className="buttonStyle" to="/search">Go</Link>
       </div>
     );
   }

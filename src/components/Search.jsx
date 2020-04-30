@@ -2,7 +2,7 @@ import React from 'react';
 import HomeButton from "./HomeButton";
 import TagList from "./TagList";
 import './search.css';
-import { Link } from 'react-router-dom';
+import Axios from 'axios';
 
 
 class Search extends React.Component {
@@ -28,11 +28,6 @@ class Search extends React.Component {
            
         })
     }
-
-    setWebcams = (webcam) =>{
-        this.props.setWebcams(webcam)
-        
-    }
     
     render() {
         return(
@@ -46,7 +41,22 @@ class Search extends React.Component {
                     <TagList onClick={this.tagUpdate}/>
                 </div>
                 <div className="webcamList">
-                    {this.props.webcams.map((webcam)=> <button onClick={()=> this.setWebcams(webcam) } type="button" className="webcamButton"><Link to="/live">{webcam.title}</Link></button>)}
+                    {this.props.webcams.filter((webcam) => (
+                        this.state.tagChosen === 'choose a tag' || webcam.category.findIndex(
+                            (category) => category.id === this.state.tagChosen
+                        ) !== -1
+                    )).map((webcam)=> (
+                        <button
+                            onClick={()=> {
+                                this.props.setLive(webcam)
+                                this.props.history.push('/live');
+                            }}
+                            type="button"
+                            className="webcamButton"
+                        >
+                            {webcam.title}
+                        </button>
+                    ))}
                 </div>
             </div>
           

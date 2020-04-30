@@ -13,6 +13,9 @@ import './App.css';
 
 function App() {
   const [webcams, setWebcams] = useState([]);
+  const [code, setCode] = useState([]);
+  const [live, setLive] = useState(null);
+
   return (
     <BrowserRouter>
       <div className="appStyle">
@@ -21,13 +24,13 @@ function App() {
         </ul>
         <Switch>
           <Route exact path="/">
-            <Home setWebcams={setWebcams} />
+            <Home setWebcams={setWebcams} setCode={setCode} />
           </Route>
-          <Route path="/search">
-            <Search setWebcams={setWebcams} webcams={webcams} />
-          </Route>
+          <Route path="/search" render={(props) => (
+            <Search {...props} setWebcams={setWebcams} webcams={webcams} code={code} setLive={setLive} />
+          )} />
           <Route path="/live">
-            <CameraLive webcams={webcams} />
+            <CameraLive live={live}/> 
           </Route>
         </Switch>
       </div>

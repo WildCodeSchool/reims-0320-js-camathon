@@ -2,6 +2,7 @@
 .hidden {
     display: none;
   }
+
 .globalSearchStyle {
     display: flex;
     flex-direction: column;
@@ -11,11 +12,16 @@
     height: 100vh;
     width: 100vw;
     font-size: 2rem;
-    background-color: rgb(180, 180, 180);
+    background-color: #2a657a
 }
 
 .tagBG {
-    background-color: white;
+    background-color: #e0e9e8;
+    color: #2a657a;
+    font-weight: bold;
+    width: 80vw;
+    border-radius: 10px;
+    font-size: 1.5rem;
 }
 .tagList{
     display: flex;
@@ -25,18 +31,19 @@
     align-items: center;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    
 }
 
 .tagButton {
     width: 70vw;
+    background-color: #192335;
     height: 8vh;
-    background-color: rgb(201, 201, 201);
     border-radius: 20px;
     border: hidden;
     margin-bottom: 2rem;
     box-shadow: 2px 2px 3px black;
-    font-size: 2rem;
-    color: white;
+    font-size: 1.7rem;
+    color: #e0e9e8;
     text-shadow: 1px 1px 2px black;
 }
 
@@ -52,39 +59,31 @@
     z-index: 1;
     height: 100vh;
     width: 100vw;
-    background-color: rgb(122, 118, 126);
+    background-color: #e0e9e8;
     color: black;
     overflow: scroll;
    
     
 }
 
-.camStyle {
-    height: 7vh;
-    width: 80vw;
-    background-color: rgb(122, 118, 126);
-    border-radius: 10px;
-    color: white;
-}
-
 .webcamList {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     height: 50vh;
     width: 100vw;
     overflow: scroll;
+    
+    
 }
 .webcamButton {
     width: 70vw;
-    background-color: rgb(122, 118, 126);
+    background-color: #e0e9e8;
     border-radius: 20px;
     border: hidden;
+    color: #192335;;
     box-shadow: 2px 2px 3px black;
-    color: white;
-    text-shadow: 1px 1px 2px black;
     margin-bottom: 1rem;
     font-size: 2rem;
-    
+}
+
+.link:link {
+    text-decoration: none;
 }

@@ -2,6 +2,8 @@
     display: none;
 }
 
+
+
 .modalOn {
     display: flex;
     flex-direction: column;
@@ -11,19 +13,26 @@
     z-index: 1;
     height: 100vh;
     width: 100vw;
-    background-color:rgb(252, 252, 87);
-    color: black;
+    background-color:#e0e9e8;
     overflow: scroll;
+   
 }
 
 .buttonStyle {
     display: block;
-    background-color: rgb(70, 70, 241);
-    color: white;
+    background-color: #7ad0d4;
+    color: #192335;
+    font-weight: bold;
+    font-size: 2rem;
     border: none;
     border-radius: 4px;
     text-align: center;
     height: 3em;
     cursor: pointer;
-    font-size: large;
+    max-width: 70vw;
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem;
+   
+   
 }
